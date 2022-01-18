@@ -1,0 +1,19 @@
+{% extends "base.twig" %}
+
+{% block title %}Search page{% endblock %}
+
+{% block content %}
+    <body>
+        <form method="POST" accept-charset="utf-8">
+            <input type="search" name="search" value="{{ lastSearch }}" placeholder="Search your video" required>
+            <button type="submit">Search</button>
+        </form>
+        <ol>
+            {% set i = 0 %}
+            {% for title in titles %}
+                <a href="https://www.youtube.com/watch?v={{ videoIds[i] }}" target="_blank"><li>{{ title }}</li></a>
+                {% set i = i + 1 %}
+            {% endfor %}
+        </ol>
+    </body>
+{% endblock %}

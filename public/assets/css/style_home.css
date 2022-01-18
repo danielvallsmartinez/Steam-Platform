@@ -1,0 +1,168 @@
+:root {
+  --primary-color: #1D2024;
+  --secondary-color: #1c3fa8;
+  --dark-color: #002240;
+  --light-color: #787878;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  width: 100%;
+  height: 10%;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  color: #1D2024;
+  line-height: 1.6;
+}
+
+footer {
+  width: 100%;
+  height: 30%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #c6d4df;
+}
+
+h1, h2 {
+  font-weight: 300;
+  line-height: 1.2;
+  margin: 10px 0;
+}
+
+p {
+  margin: 10px 0;
+}
+
+code, pre {
+  background: #1D2024;
+  color: #fff;
+  padding: 10px;
+}
+
+.hidden {
+  visibility: hidden;
+  height: 0;
+}
+
+/* Navbar */
+.navbar {
+  color: #fff;
+}
+
+.navbar ul {
+  display: flex;
+}
+
+.navbar a {
+  color: #fff;
+  padding: 10px;
+  margin: 0 5px;
+}
+
+.navbar a:hover {
+  border-bottom: 2px #fff solid;
+}
+
+.navbar .flex {
+  justify-content: space-between;
+}
+
+.features-main .card > i {
+  margin-right: 20px;
+}
+
+.features-main .grid {
+  padding: 30px;
+}
+
+.features-main .grid > *:first-child {
+  grid-column: 1 / span 3;
+}
+
+.features-main .grid > *:nth-child(2) {
+  grid-column: 1 / span 2;
+}
+
+.divUsernameWallet {
+  display: flex;
+  flex-direction: row;
+}
+
+#liUsername > ul{
+  padding-top: 10px;
+  display: none;
+  position: absolute;
+}
+
+.ulUsername > ul > li{
+  margin: 10px 0;
+}
+
+#pUsername {
+  color: deepskyblue;
+}
+
+#liUsername:hover > ul {
+  display: flex;
+  flex-direction: row;
+}
+
+#pWallet {
+  margin-left: 10px;
+  color: greenyellow;
+  align-self: center;
+}
+
+.navHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.navHeader > ul > li {
+  align-self: center;
+}
+
+.ulUsername > li {
+  align-self: center;
+}
+
+.aAvatar {
+  display: flex;
+  flex-direction: column;
+  margin: 0 !important;
+  padding: 0 !important;
+  align-self: center;
+}
+
+.avatar {
+  width: 3.5vw;
+  height: auto;
+  max-height: 3.5vw;
+  margin: 5px;
+  margin-right: 10px;
+  border: solid greenyellow;
+  border-width: 2px;
+  align-self: center;
+}
+
+.aAvatar:hover {
+  border-bottom: 0 !important;
+}
+
+.avatar:hover {
+  border-color: orange;
+}

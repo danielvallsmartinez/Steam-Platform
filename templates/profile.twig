@@ -1,0 +1,33 @@
+{% extends "base.twig" %}
+
+{% block title %}Profile page{% endblock %}
+
+{% block content %}
+    <body>
+        <form class="formProfile" method="POST" accept-charset="utf-8" enctype="multipart/form-data">
+            <label for="username">Username:</label>
+            <input type="text" name="username" value="{{ username }}" required disabled>
+            <label for="email">Email:</label>
+            <input type="email" name="email" value="{{ email }}" required disabled>
+            <label for="username">Birthday:</label>
+            <input type="text" name="birthday" value="{{ birthday }}" required disabled>
+            <label for="username">Phone:</label>
+            <input type="tel" name="phone" value="{{ phone }}">
+            {% if errors %}
+                {% for error in errors[0] %}
+                    <p class="error">{{ error }}</p>
+                {% endfor %}
+            {% endif %}
+            <label for="file">Profile picture:</label>
+            <input type="file" name="file">
+            {% if errors %}
+                {% for error in errors[1] %}
+                    <p class="error">{{ error }}</p>
+                {% endfor %}
+            {% endif %}
+            <button type="submit">Update</button>
+        </form>
+        <a href="/profile/changePassword">Change password</a>
+        <p class="updatedMessage" style="opacity: {{ opacity }} ; color: green">User updated</p>
+    </body>
+{% endblock %}

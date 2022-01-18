@@ -1,0 +1,271 @@
+html {
+    height: 100vh;
+}
+
+body {
+    background-color: #1D2024;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+input {
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+button {
+    height: 40px;
+}
+
+.formProfile {
+    background: #787878;
+    padding-top: 1%;
+    padding-bottom: 3%;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-top: 7.5%;
+    margin-bottom: 2%;
+    width: 40%;
+    justify-content: center;
+    display: grid;
+    grid-gap: 1.5%;
+    grid-template-columns: 25% 75%;
+    grid-template-rows: auto auto auto auto auto auto auto;
+}
+
+.formChangePassword {
+    background: #787878;
+    padding-top: 2%;
+    padding-bottom: 3%;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    margin-top: 7.5%;
+    margin-bottom: 7.5%;
+    width: 40%;
+    justify-content: center;
+    /*display: grid;
+    grid-gap: 4%;
+    grid-template-columns: 27% 73%;
+    grid-template-rows: auto auto auto auto auto auto auto;*/
+}
+
+.formProfile > input , .formChangePassword  > input {
+    width: 100%;
+    height: 30px;
+    margin-top: 0;
+}
+
+.formProfile, > input , .formChangePassword  > label {
+    margin: 0;
+    width: 100%;
+}
+
+.formProfile, > input , .formChangePassword  > button {
+    margin-top: 20px;
+    width: 120px;
+    height: 40px;
+}
+
+.formProfile > p {
+    color: darkred;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.friend {
+    display: grid;
+    grid-gap: 5%;
+    grid-template-columns: 50% 50%;
+    color: white;
+    justify-self: center;
+    horiz-align: center;
+    align-self: center;
+}
+
+.friend > p {
+    color: white;
+    align-self: center;
+    justify-self: center;
+    horiz-align: center;
+}
+
+
+.updatedMessage {
+    margin-bottom: 7.5%;
+}
+
+.formRegister {
+    background: #787878;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-top: 7.5%;
+    margin-bottom: 7.5%;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.formRegister > input {
+    width: 100%;
+    height: 30px;
+    margin-top: 20px;
+}
+
+.formRegister > p {
+    width: 100%;
+    margin: 2px;
+    text-align: left;
+    color: red;
+}
+
+.formRegister > button {
+    margin-top: 20px;
+    width: 120px;
+    height: 40px;
+}
+
+.formLogin {
+    background: #787878;
+    margin-top: 5%;
+    margin-bottom: 15%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.formLogin > p {
+    text-align: center;
+}
+
+.formMail { /*Creo que no se usa*/
+    background: none;
+}
+
+.divFormLogin {
+    display: flex;
+    justify-content: center;
+}
+
+.formWallet {
+    background: #787878;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-top: 9%;
+    margin-bottom: 14%;
+    height: 35%;
+    width: 40%;
+}
+
+.divFormWallet1 {
+    padding-top: 1.5%;
+    width: 70%;
+}
+
+.divFormWallet1 > p{
+    font-size: 30px;
+}
+
+.divFormWallet1-1 {
+    display: flex;
+    justify-content: left;
+    width: 100%;
+}
+
+.divFormWallet1-1 > input {
+    width: 70%;
+    padding: 0;
+    margin-right: 10px;
+    height: 50px;
+}
+
+.divFormWallet1-1 > button {
+    width: 20%;
+    height: 54px;
+}
+
+.divFormWallet2 {
+    width: 30%;
+}
+
+ol {
+    margin-top: 3%;
+    margin-bottom: 3%;
+    padding-top: 2%;
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    width: 40%;
+    background: #3b3f45;
+    border: solid greenyellow;
+    border-width: 2px;
+    justify-content: center;
+}
+
+.gameList > div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.gameList {
+    margin-bottom: 150px;
+}
+
+.formBuyGame {
+    background: #787878;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 90%;
+    padding: 5%;
+    width: 50%;
+}
+
+.formWishlistGame {
+    background: #787878;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 90%;
+    padding: 5%;
+    width: 50%;
+}
+
+.divMyGame {
+    background: #787878;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 90%;
+    padding: 5%;
+    padding-bottom: 1.5%;
+    width: 50%;
+}
+
+.pGames {
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+.auxiliarMessage {
+    text-align: center;
+    color: white;
+}

@@ -1,0 +1,32 @@
+{% extends "base.twig" %}
+
+{% block title %}Store page{% endblock %}
+
+{% block content %}
+    <p>{{ message }}</p>
+    {% if notifications is not empty %}
+        <ol>
+            {% for notification in notifications %}
+                <li>{{ notification }}</li>
+            {% endfor %}
+        </ol>
+    {% endif %}
+    <ol class="gameList">
+        {% for game in games %}
+            <div>
+                <form class="formBuyGame" action="{{ url_for('buy', { 'gameID' : game.id() }) }}" method="POST">
+                    <img src="{{ game.thumb() }}" alt="game thumbnail">
+                    <p class="pGames">ID: {{ game.id() }}</p>
+                    <p class="pGames">Title: {{ game.title() }}</p>
+                    <p style="color: greenyellow" class="pGames">{{ game.normalPrice() }} €</p>
+                    <button type="submit" name="purchase" value="{{ game.id() }}">BUY</button>
+                </form>
+                {%  if not game.wishlisted()  %}
+                    <form class="formWishlistGame" action="{{ url_for('addToWishlist', { 'gameID' : game.id() }) }}" method="POST">
+                        <button type="submit" name="addToWishlist" value="{{ game.id() }}">WISHLIST</button>
+                    </form>
+                {% endif %}
+            </div>
+        {% endfor %}
+    </ol>
+{% endblock %}

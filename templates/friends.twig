@@ -1,0 +1,22 @@
+{% extends "base.twig" %}
+
+{% block title %}Friends page{% endblock %}
+
+{% block content %}
+    {% if friends%}
+    <ol class="gameList">
+        <div class="friend"><h4>Username</h4><h4>Accept date</h4></div>
+        {% for friend in friends %}
+            <div class="friend">
+                <p>{{ friend.username }}</p>
+                <p>{{ friend.accept_date }}</p>
+            </div>
+        {% endfor %}
+    </ol>
+    {%endif%}
+    {% if not friends%}
+        <p class="auxiliarMessage" style="margin-bottom: 30%; align-self: center">You are an antisocial, go and find some friends!</p>
+    {%endif%}
+    <a href="/user/friendRequests" style="color: lightblue";>View and accept LSteam friend requests</a>
+    <a href="/user/friendRequests/send" style="color: lightblue;">Send an LSteam friend request</a>
+{% endblock %}

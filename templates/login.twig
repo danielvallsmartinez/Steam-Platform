@@ -1,0 +1,16 @@
+{% extends "base.twig" %}
+
+{% block title %}Login page{% endblock %}
+
+{% block content %}
+    <form class="formLogin" method="POST" accept-charset="utf-8">
+        <div class="divFormLogin">
+            <input type="text" name="usernameOrEmail" value="{{ usernameOrEmail }}" placeholder="Enter your username/email" required>
+            <input type="password" name="password" value="{{ password }}" placeholder="Enter your password">
+            <button type="submit">Login</button>
+        </div>
+        {% if error %}
+            <p style="color: red;">{{ error }}</p>
+        {% endif %}
+    </form>
+{% endblock %}

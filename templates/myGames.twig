@@ -1,0 +1,29 @@
+{% extends "base.twig" %}
+
+{% block title %}My Games{% endblock %}
+
+{% block content %}
+    <p>{{ message }}</p>
+    {% if games%}
+        <ol class="gameList">
+            {% for game in games %}
+                <div>
+                    <div class="divMyGame">
+                        <img src="{{ game.thumb() }}" alt="game thumbnail">
+                        <p class="pGames">ID: {{ game.id() }}</p>
+                        <p class="pGames">Title: {{ game.title() }}</p>
+                        <p style="color: greenyellow" class="pGames">{{ game.normalPrice() }} €</p>
+                        {%  if not game.wishlisted()  %}
+                            <form class="formWishlistGame" action="{{ url_for('addToWishlist', { 'gameID' : game.id() }) }}" method="POST">
+                                <button type="submit" name="addToWishlist" value="{{ game.id() }}">WISHLIST</button>
+                            </form>
+                        {% endif %}
+                    </div>
+                </div>
+            {% endfor %}
+        </ol>
+    {%endif%}
+    {% if not games%}
+        <p class="auxiliarMessage" style="margin-bottom: 30%; align-self: center">You are poor and have no games :(</p>
+    {%endif%}
+{% endblock %}

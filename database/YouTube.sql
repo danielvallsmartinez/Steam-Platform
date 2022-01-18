@@ -1,0 +1,11 @@
+CREATE DATABASE YouTube;
+USE YouTube;
+
+CREATE TABLE `user` (
+  `id` INT(11) unsigned NOT NULL AUTO_INCREMENT,
+  `email` VARCHAR(255) NOT NULL DEFAULT '',
+  `password` VARCHAR(255) NOT NULL DEFAULT '',
+  `created_at` DATETIME NOT NULL,
+  `updated_at` DATETIME NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

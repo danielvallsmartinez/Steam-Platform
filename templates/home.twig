@@ -1,0 +1,63 @@
+{% extends "base.twig" %}
+
+{% block title %}LSteam | Next Level Gaming{% endblock %}
+
+{% block content %}
+    <!-- Head -->
+    <section class="bg-primary py-3">
+        <div class="container grid">
+
+            <div>
+                <h1 class="xl">Welcome to LSteam!</h1>
+                <p class="lead">
+                    LSteam offers you the best prices on the market for all your gaming needs... And it even works underwater! (don't try it)
+                </p>
+            </div>
+            <img src="{{ full_url_for('home') }}assets/images/logos/ls-logo.png" width="75%" alt="">
+
+        </div>
+    </section>
+
+    <!-- Sub head -->
+    <section class="bg-light py-3">
+        <div class="container grid">
+            <img src="{{ full_url_for('home') }}assets/images/server.png" width="50%" alt="">
+            <div>
+                <h1 class="md">About the Platform</h1>
+                <p>
+                    Have instant access to nearly 30 000 published games. From indie to AAA games developed by well renown companies. Enjoy exclusive offers, automatic updates and free your hard drive space with cloud gaming!
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="features-main bg-primary">
+        <div class="container grid grid-3">
+            <p class="md">
+                We work hard to bring you the newest features and QoL updates to LSteam such as:
+            </p>
+            <div class="card cardFlex">
+                <p>
+                    Chat with your friends all over the world with our integrated chat system.
+                </p>
+            </div>
+            <div class="card cardFlex">
+                <p>
+                    Access LSteam with your mobile phone anytime anywhere from the web browser.
+                </p>
+            </div>
+            <div class="card cardFlex">
+                <p>
+                    Access a huge database of games with endless hours of gameplay.
+                </p>
+            </div>
+            <div class="card cardFlex">
+                <p>
+                    Wishlist the new anticipated games to be the first to play them!
+                </p>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+

@@ -1,0 +1,47 @@
+{% extends "base.twig" %}
+
+{% block title %}Register page{% endblock %}
+
+{% block content %}
+    <body>
+        <form class="formRegister" method="POST" accept-charset="utf-8">
+            <input type="text" name="username" value="{{ newusername }}" placeholder="Enter your username" required>
+            {% if errors %}
+                {% for error in errors[0] %}
+                    <p>{{ error }}</p>
+                {% endfor %}
+            {% endif %}
+            <input type="email" name="email" value="{{ email }}" placeholder="Enter your email" required>
+            {% if errors %}
+                {% for error in errors[1] %}
+                    <p>{{ error }}</p>
+                {% endfor %}
+            {% endif %}
+            <input type="password" name="password1" value="{{ password1 }}" placeholder="Enter your password" required>
+            {% if errors %}
+                {% for error in errors[2] %}
+                    <p>{{ error }}</p>
+                {% endfor %}
+            {% endif %}
+            <input type="password" name="password2" value="{{ password2 }}" placeholder="Repeat your password" required>
+            {% if errors %}
+                {% for error in errors[3] %}
+                    <p>{{ error }}</p>
+                {% endfor %}
+            {% endif %}
+            <input type="date" name="birthday" value="{{ birthday }}" placeholder="Enter your birthday" max="{{ currentDate }}" min="1900-01-01" required>
+            {% if errors %}
+                {% for error in errors[4] %}
+                    <p>{{ error }}</p>
+                {% endfor %}
+            {% endif %}
+            <input type="tel" name="phone" value="{{ phone }}" placeholder="Enter your phone number">
+            {% if errors %}
+                {% for error in errors[5] %}
+                    <p>{{ error }}</p>
+                {% endfor %}
+            {% endif %}
+            <button type="submit">Register</button>
+        </form>
+    </body>
+{% endblock %}

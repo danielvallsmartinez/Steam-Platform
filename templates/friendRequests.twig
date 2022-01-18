@@ -1,0 +1,22 @@
+{% extends "base.twig" %}
+
+{% block title %}Friend requests page{% endblock %}
+
+{% block content %}
+    <p style="color: green;">{{ message }}</p>
+    {% if requests%}
+    <ol class="gameList">
+        {% for request in requests %}
+            <div>
+                <form class="formBuyGame" action="{{ url_for('accept', { 'requestId' : request.id() }) }}" method="POST">
+                    <p class="pGames">Username: {{ request.username() }}</p>
+                    <button type="submit" name="accept" value="{{ request.id() }}">Accept</button>
+                </form>
+            </div>
+        {% endfor %}
+    </ol>
+    {%endif%}
+    {% if not requests%}
+        <p class="auxiliarMessage" style="margin-bottom: 30%; align-self: center">You don't have any friend request :(</p>
+    {%endif%}
+{% endblock %}
